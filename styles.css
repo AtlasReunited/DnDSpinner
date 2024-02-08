@@ -1,0 +1,124 @@
+body {
+    background-color: #fff4dd;
+    font-family: 'Times New Roman', serif; /* Use a traditional font */
+    margin: 0;
+}
+div{
+    background-color: #fff8f2;
+
+}
+
+#title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff4dd;
+    border-bottom: 1px solid #ccc;
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff4dd;
+
+
+}
+
+.statbox {
+    width: 100px; /* Set a fixed width for consistency */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+}
+.statbox p {
+    margin-bottom: 0px;
+}
+
+
+.statbox input {
+    width: 50px;
+    margin-left: 10px;
+
+}
+
+.modifier{
+    position: relative;
+    display: inline-block;
+    margin-left: 10px; /* Add spacing between the textbox and the calculated value */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #555; /* Adjust text color */
+    margin-bottom: 0;
+}
+
+
+#imagePlacement {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 2px dashed #8c6239;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%); /* Center the element precisely */
+}
+
+#selectedImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    cursor: pointer; /* Change cursor to pointer for clickable effect */
+    /*set the middle of the image to be centered horizontally*/
+
+}
+
+#imageInput {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer; /* Change cursor to pointer for clickable effect */
+}
+
+.roll-preset {
+    border: 2px solid #8c6239;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+button {
+    background-color: #8c6239;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.add-new {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

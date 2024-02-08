@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <h1 contentEditable="true" spellcheck="false" id="title">Your D&D Roller</h1>
+
+    <div id="imagePlacement">
+        <label for="imageInput" id="imageInputLabel">
+            <img id="selectedImage" alt="Selected Image">
+        </label>
+        <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+    </div>
+
+
+    <div id="stats">
+        <div id="strengthbox" class="statbox">
+            <p>Strength</p>
+            <input id="strengthinput" type="number" value="10">
+            <p id="strengthCalculatedValue" class="modifier">0</p>
+
+        </div>
+        <div id="constitutionbox" class= "statbox" >
+            <p>Constitution</p>
+            <input id="constitutioninput" type="number" value="10">
+            <p id="constitutionCalculatedValue" class="modifier">0</p>
+
+        </div>
+        <div id="dexteritybox" class= "statbox">
+            <p>Dexterity</p>
+            <input id="dexterityinput" type="number" value="10">
+            <p id="dexterityCalculatedValue" class="modifier">0</p>
+
+        </div>
+        <div id="intelligencebox" class= "statbox">
+            <p>Intelligence</p>
+            <input id="intelligenceinput" type="number" value="10">
+            <p id="intelligenceCalculatedValue" class="modifier">0</p>
+
+        </div>
+        <div id="wisdombox" class= "statbox">
+            <p>Wisdom</p>
+            <input id="wisdominput" type="number" value="10">
+            <p id="wisdomCalculatedValue" class="modifier">0</p>
+        </div>
+        <div id="charismabox" class= "statbox">
+            <p>Charisma</p>
+            <label for="charismainput"></label><input id="charismainput" type="number" value="10">
+            <p id="charismaCalculatedValue" class="modifier">0</p>
+
+        </div>
+    </div>
+
+    <div class="roll-presets" id="rollPresets">
+        <div class="roll-preset" id="preset1">
+            <p>Name: <span contentEditable="true" spellcheck="false">Preset 1</span></p>
+            <p>Range: <input type="text" id="range1" value="1-20"></p>
+            <p>Modifier:
+                <select id="modifier1Type" onchange="toggleCustomModifier('modifier1')">
+                    <option value="custom">Custom</option>
+                    <option value="str_mod">Strength Modifier</option>
+                    <option value="dex_mod">Dexterity Modifier</option>
+                    <option value="con_mod">Constitution Modifier</option>
+                    <option value="int_mod">Intelligence Modifier</option>
+                    <option value="wis_mod">Wisdom Modifier</option>
+                    <option value="cha_mod">Charisma Modifier</option>
+                </select>
+                <input type="text" id="modifier1Value" class="custom-modifier" value="+2">
+            </p>
+            <button onclick="rollPreset('preset1')">Roll</button>
+            <p class="result" id="result1"></p>
+        </div>
+
+        <!-- Add new roll preset button -->
+        <button class="add-new" onclick="addNewPreset()">Add New</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
